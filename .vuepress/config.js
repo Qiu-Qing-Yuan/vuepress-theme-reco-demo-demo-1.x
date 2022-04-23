@@ -1,4 +1,9 @@
 module.exports = {
+	locales: {
+    '/': {
+      lang: 'zh-CN'
+    }
+   },
   title: "vuepress-theme-reco",
   description: 'A simple and beautiful vuepress blog theme .',
   dest: 'public',
@@ -7,7 +12,27 @@ module.exports = {
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
   theme: 'reco',
-  themeConfig: {
+  themeConfig: { 
+	locales: {
+      '/': {
+        recoLocales: {
+          homeBlog: {
+            article: '美文', // 默认 文章
+            tag: '标识', // 默认 标签
+            category: '类别', // 默认 分类
+            friendLink: '友链' // 默认 友情链接
+          },
+          pagation: {
+            prev: '上一页',
+            next: '下一页',
+            go: '前往',
+            jump: '跳转至'
+          }
+        }
+      }
+    },
+	
+	
     nav: [
       { text: 'Home', link: '/', icon: 'reco-home' },
       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
